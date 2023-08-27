@@ -1,19 +1,25 @@
 <resources>
     <string name="app_name">Wishes</string>
+
+    <string name="start">start</string>
+    <string name="generate">generate</string>
     <string name="to_creator">credits</string>
-    <string name="exit_text">Are you sure you want to exit?</string>
-    <string name="exit_confirmation">Yes</string>
-    <string name="exit_canceled">No</string>
     <string name="exit">Exit</string>
+
     <string name="back">go back</string>
+
     <string name="developer">Developer</string>
     <string name="designer">Designer</string>
     <string name="ImmortalIdiot"><a href="ImmortalIdiot">ImmortalIdiot</a></string>
     <string name="Anastasia"><a href="BestPrincess">BestPrincess</a></string>
-    <string name="generate">generate</string>
-    <string name="start">start</string>
+
     <string name="from">from</string>
     <string name="to">to</string>
     <string name="first">first</string>
     <string name="second">second</string>
+
+    <string name="change_mode">Select a mode</string>
+    <string name="emoji_generator">Random love emojis</string>
+    <string name="day_wish_generator">Day wish generator</string>
+    <string name="night_wish_generator">Night wish generator</string>
 </resources>

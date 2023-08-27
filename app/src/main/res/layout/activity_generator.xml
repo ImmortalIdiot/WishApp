@@ -7,40 +7,42 @@
     tools:context=".GeneratorActivity">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/backButton"
-        android:layout_width="205dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="103dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="71dp"
-        android:background="@drawable/custom_button"
-        android:fontFamily="@font/archivo_semibold_italic"
-        android:gravity="center"
-        android:onClick="goBack"
-        android:text="@string/back"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="textSizeCheck" />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/generateButton"
         android:layout_width="205dp"
-        android:layout_height="73dp"
+        android:layout_height="56dp"
         android:layout_marginStart="103dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="103dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/archivo_semibold_italic"
         android:gravity="center"
         android:text="@string/generate"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/to"
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="205dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/archivo_semibold_italic"
+        android:gravity="center"
+        android:onClick="goBack"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck" />
 
     <TextView

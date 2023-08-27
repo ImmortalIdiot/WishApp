@@ -14,13 +14,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void switchToGenerator(View v) {
-        Intent intent = new Intent(this, GeneratorActivity.class);
+    public void switchToModeSelectionActivity(View v) {
+        Intent intent = new Intent(this, ModeSelectionActivity.class);
         startActivity(intent);
     }
 
 
-    public void switchToCreator(View v) {
+    public void switchToCreditsActivity(View v) {
         Intent intent = new Intent(this, CreditsActivity.class);
         startActivity(intent);
     }

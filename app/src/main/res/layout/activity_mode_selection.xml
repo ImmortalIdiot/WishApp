@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModeSelectionActivity">
+
+    <TextView
+        android:id="@+id/modeSelection"
+        android:layout_width="201dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="105dp"
+        android:text="@string/change_mode"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loveEmojiGenerator"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/archivo_semibold_italic"
+        android:gravity="center"
+        android:onClick="switchToGenerator"
+        android:text="@string/emoji_generator"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modeSelection"
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dayWishGenerator"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/archivo_semibold_italic"
+        android:gravity="center"
+        android:text="@string/day_wish_generator"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loveEmojiGenerator"
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nightWishGenerator"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/archivo_semibold_italic"
+        android:gravity="center"
+        android:text="@string/night_wish_generator"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayWishGenerator"
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="205dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/archivo_semibold_italic"
+        android:gravity="center"
+        android:onClick="goBack"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
