@@ -7,9 +7,6 @@ public class InputFilter implements android.text.InputFilter {
     private final int min;
     private final int max;
 
-    private final int MINIMUM = 1000;
-    private final int MAXIMUM = 2999;
-
     public InputFilter(int min, int max) {
         this.min = min;
         this.max = max;

@@ -2,7 +2,6 @@
     <string name="app_name">Wishes</string>
 
     <string name="start">start</string>
-    <string name="generate">generate</string>
     <string name="to_creator">credits</string>
     <string name="exit">Exit</string>
 
@@ -13,13 +12,15 @@
     <string name="ImmortalIdiot"><a href="ImmortalIdiot">ImmortalIdiot</a></string>
     <string name="Anastasia"><a href="BestPrincess">BestPrincess</a></string>
 
-    <string name="from">from</string>
-    <string name="to">to</string>
-    <string name="first">first</string>
-    <string name="second">second</string>
+    <string name="generate_and_copy">generate and copy</string>
 
     <string name="change_mode">Select a mode</string>
     <string name="emoji_generator">Random love emojis</string>
     <string name="day_wish_generator">Day wish generator</string>
     <string name="night_wish_generator">Night wish generator</string>
+    
+    <string name="number_of_emojis">Enter the number of emojis</string>
+    <string name="min_and_max_hint">min:1 max:2500</string>
+    
+    <string name="text_copied_hint">Emojis copied to clipboard</string>
 </resources>

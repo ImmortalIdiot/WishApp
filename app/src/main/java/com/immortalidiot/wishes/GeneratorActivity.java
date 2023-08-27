@@ -1,37 +1,50 @@
 package com.immortalidiot.wishes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
-import android.widget.EditText;
+
+import com.google.android.material.textfield.TextInputEditText;
+
+import java.util.Objects;
 
 
 public class GeneratorActivity extends AppCompatActivity {
-
+    //private final TextInputLayout text = findViewById(R.id.valueField);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generator);
 
-        EditText firstValueField = findViewById(R.id.first);
-        EditText secondValueField = findViewById(R.id.second);
+        TextInputEditText valueField = findViewById(R.id.valueField);
 
-        firstValueField.setTransformationMethod(new NumericKeyBoardTransformation());
-        secondValueField.setTransformationMethod(new NumericKeyBoardTransformation());
 
-        final int CRITICAL_MINIMUM = 1;
-        final int CRITICAL_MAXIMUM = 2500;
+        valueField.setTransformationMethod(new NumericKeyBoardTransformation());
 
-        firstValueField.setFilters(
-                new InputFilter[]{new com.immortalidiot.wishes.InputFilter(
-                        CRITICAL_MINIMUM, CRITICAL_MAXIMUM)});
+        valueField.setFilters(new InputFilter[]{
+                new com.immortalidiot.wishes.InputFilter(1, 2500)
+        });
 
-        secondValueField.setFilters(
-                new InputFilter[]{new com.immortalidiot.wishes.InputFilter(
-                        CRITICAL_MINIMUM, CRITICAL_MAXIMUM)});//Integer.parseInt(String.valueOf(firstValueField)))});
+        AppCompatButton generateButton = findViewById(R.id.generateButton);
+        generateButton.setOnClickListener(v -> {
+            int value = Integer.parseInt(Objects.requireNonNull(valueField.getText()).toString());
+            String copyHint = String.valueOf(R.string.text_copied_hint);
 
+            WishGenerator generate = new WishGenerator();
+
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText(copyHint, generate.generator(value));
+            clipboard.setPrimaryClip(clip);
+        });
     }
+
+
     public void goBack(View v) {
         finish();
     }
