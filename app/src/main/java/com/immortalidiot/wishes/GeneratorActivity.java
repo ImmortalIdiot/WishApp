@@ -9,6 +9,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -16,7 +17,6 @@ import java.util.Objects;
 
 
 public class GeneratorActivity extends AppCompatActivity {
-    //private final TextInputLayout text = findViewById(R.id.valueField);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +31,11 @@ public class GeneratorActivity extends AppCompatActivity {
                 new com.immortalidiot.wishes.InputFilter(1, 2500)
         });
 
+        String text = Objects.requireNonNull(valueField.getText()).toString();
+
         AppCompatButton generateButton = findViewById(R.id.generateButton);
-        generateButton.setOnClickListener(v -> {
-            int value = Integer.parseInt(Objects.requireNonNull(valueField.getText()).toString());
+        if (text.length() != 0) generateButton.setOnClickListener(v -> {
+            int value = Integer.parseInt(text);
             String copyHint = String.valueOf(R.string.text_copied_hint);
 
             WishGenerator generate = new WishGenerator();
@@ -43,7 +45,6 @@ public class GeneratorActivity extends AppCompatActivity {
             clipboard.setPrimaryClip(clip);
         });
     }
-
 
     public void goBack(View v) {
         finish();

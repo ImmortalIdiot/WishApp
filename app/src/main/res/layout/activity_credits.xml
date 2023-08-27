@@ -6,31 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".CreditsActivity">
 
+
     <TextView
         android:id="@+id/developers"
-        android:layout_width="226dp"
+        android:layout_width="225dp"
         android:layout_height="52dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="114dp"
-        android:background="@color/button_color"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="189dp"
+        android:layout_marginEnd="93dp"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
         android:text="@string/developer"
         android:textColor="@color/white"
         android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/ImmortalIdiotTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/ImmortalIdiotTextView"
-        android:layout_width="226dp"
+        android:layout_width="225dp"
         android:layout_height="52dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginEnd="114dp"
-        android:background="@color/button_color"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="93dp"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
         android:onClick="telegramImmortalIdiot"
@@ -42,15 +43,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/developers" />
 
-
     <TextView
         android:id="@+id/designer"
-        android:layout_width="226dp"
+        android:layout_width="225dp"
         android:layout_height="52dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="114dp"
-        android:background="@color/button_color"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="93dp"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
         android:text="@string/designer"
@@ -61,11 +59,13 @@
         app:layout_constraintTop_toBottomOf="@+id/ImmortalIdiotTextView"
         tools:ignore="TextSizeCheck" />
 
+
     <TextView
         android:id="@+id/BestPrincessTextView"
-        android:layout_width="226dp"
+        android:layout_width="225dp"
         android:layout_height="52dp"
-        android:background="@color/button_color"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="93dp"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
         android:onClick="telegramBestPrincess"
@@ -74,9 +74,9 @@
         android:textColorLink="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/designer" />
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backButton"

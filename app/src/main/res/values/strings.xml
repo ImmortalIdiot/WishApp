@@ -18,9 +18,12 @@
     <string name="emoji_generator">Random love emojis</string>
     <string name="day_wish_generator">Day wish generator</string>
     <string name="night_wish_generator">Night wish generator</string>
-    
+
+    <string name="random_generator_mode">Random generator</string>
     <string name="number_of_emojis">Enter the number of emojis</string>
     <string name="min_and_max_hint">min:1 max:2500</string>
-    
+
     <string name="text_copied_hint">Emojis copied to clipboard</string>
+
+    <string name="wish_generator">Generate the wish</string>
 </resources>

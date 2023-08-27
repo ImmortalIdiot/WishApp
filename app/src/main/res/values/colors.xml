@@ -5,7 +5,7 @@
     <color name="red">#FF0000</color>
     <color name="green">#00FF00</color>
     <color name="blue">#0000FF</color>
-    <color name="background_from_color">#0a1330</color>
-    <color name="background_to_color">#234cb8</color>
-    <color name="button_color">#8a34dd</color>
+    <color name="background_from_color">#0A1330</color>
+    <color name="background_to_color">#234CB8</color>
+    <color name="button_color_bg">#8A34DD</color>
 </resources>

@@ -14,9 +14,12 @@ public class ModeSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mode_selection);
     }
 
-    public void switchToGenerator(View v) {
-        Intent intent = new Intent(this, GeneratorActivity.class);
-        startActivity(intent);
+    public void switchToGeneratorActivity(View v) {
+        startActivity(new Intent(this, GeneratorActivity.class));
+    }
+
+    public void switchToDayWishGeneratorActivity(View v) {
+        startActivity(new Intent(this, DayWishGeneratorActivity.class));
     }
 
     public void goBack(View v) {
