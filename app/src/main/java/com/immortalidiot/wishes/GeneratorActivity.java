@@ -13,7 +13,6 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.Objects;
 
 
 public class GeneratorActivity extends AppCompatActivity {
@@ -31,18 +30,21 @@ public class GeneratorActivity extends AppCompatActivity {
                 new com.immortalidiot.wishes.InputFilter(1, 2500)
         });
 
-        String text = Objects.requireNonNull(valueField.getText()).toString();
-
         AppCompatButton generateButton = findViewById(R.id.generateButton);
-        if (text.length() != 0) generateButton.setOnClickListener(v -> {
-            int value = Integer.parseInt(text);
-            String copyHint = String.valueOf(R.string.text_copied_hint);
 
-            WishGenerator generate = new WishGenerator();
 
-            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-            ClipData clip = ClipData.newPlainText(copyHint, generate.generator(value));
-            clipboard.setPrimaryClip(clip);
+        generateButton.setOnClickListener(v -> {
+            String text = String.valueOf(valueField.getText());
+            if (text.length() != 0) {
+                int value = Integer.parseInt(text);
+                String copyHint = String.valueOf(R.string.text_copied_hint);
+
+                WishGenerator generate = new WishGenerator();
+
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText(copyHint, generate.generator(value));
+                clipboard.setPrimaryClip(clip);
+            }
         });
     }
 
