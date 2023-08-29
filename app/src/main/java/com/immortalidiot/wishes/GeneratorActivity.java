@@ -8,6 +8,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.InputFilter;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
@@ -30,8 +31,14 @@ public class GeneratorActivity extends AppCompatActivity {
                 new com.immortalidiot.wishes.InputFilter(1, 2500)
         });
 
-        AppCompatButton generateButton = findViewById(R.id.generateButton);
+        valueField.setOnEditorActionListener((v, actionId, event) -> {
+            if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
+                hideVirtualKeyboard();
+            }
+            return false;
+        });
 
+        AppCompatButton generateButton = findViewById(R.id.generateButton);
 
         generateButton.setOnClickListener(v -> {
             String text = String.valueOf(valueField.getText());
@@ -46,6 +53,14 @@ public class GeneratorActivity extends AppCompatActivity {
                 clipboard.setPrimaryClip(clip);
             }
         });
+    }
+
+    private void hideVirtualKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     public void goBack(View v) {
