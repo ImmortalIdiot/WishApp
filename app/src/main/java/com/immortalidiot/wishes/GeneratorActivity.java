@@ -28,7 +28,7 @@ public class GeneratorActivity extends AppCompatActivity {
         valueField.setTransformationMethod(new NumericKeyBoardTransformation());
 
         valueField.setFilters(new InputFilter[]{
-                new com.immortalidiot.wishes.InputFilter(1, 2500)
+                new com.immortalidiot.wishes.InputFilter(1, 2000)
         });
 
         valueField.setOnEditorActionListener((v, actionId, event) -> {
