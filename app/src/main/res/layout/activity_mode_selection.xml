@@ -52,7 +52,7 @@
         android:background="@drawable/custom_button"
         android:fontFamily="@font/archivo_semibold_italic"
         android:gravity="center"
-        android:text="@string/day_wish_generator"
+        android:text="@string/day_wish_generator_mode"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="26sp"
