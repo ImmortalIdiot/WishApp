@@ -26,4 +26,106 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck" />
 
+    <TextView
+        android:id="@+id/dayWishGenerator"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="43dp"
+        android:fontFamily="@font/archivo_medium"
+        android:gravity="center"
+        android:text="@string/day_wish_generator"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/activityDayWishGeneratorHint"
+        android:layout_width="371dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="@string/number_of_emojis"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayWishGenerator"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="28dp"
+        android:gravity="end"
+        android:text="@string/from"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityDayWishGeneratorHint"
+        tools:ignore="TextSizeCheck" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/firstValueField"
+        android:layout_width="141dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="94dp"
+        android:digits="0123456789"
+        android:fontFamily="@font/tomorrow_light_italic"
+        android:gravity="center"
+        android:hint="@string/min_hint"
+        android:inputType="numberPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/from"
+        app:layout_constraintTop_toBottomOf="@+id/activityDayWishGeneratorHint"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/to"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="36dp"
+        android:gravity="end"
+        android:text="@string/to"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from"
+        tools:ignore="TextSizeCheck" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/secondValueField"
+        android:layout_width="141dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="94dp"
+        android:digits="0123456789"
+        android:fontFamily="@font/tomorrow_light_italic"
+        android:gravity="center"
+        android:hint="@string/max_hint"
+        android:inputType="numberPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/to"
+        app:layout_constraintTop_toBottomOf="@+id/firstValueField"
+        tools:ignore="TextSizeCheck" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
