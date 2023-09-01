@@ -21,7 +21,7 @@
 
     <string name="random_generator_mode">Random generator</string>
     <string name="number_of_emojis">Number of emojis</string>
-    <string name="min_and_max_hint">1 – 2500</string>
+    <string name="min_and_max_hint">1 – 2000</string>
 
     <string name="text_copied_hint">Emojis copied to clipboard</string>
 
@@ -31,6 +31,6 @@
     <string name="from">from:</string>
     <string name="to">to:</string>
     <string name="min_hint">min: 1</string>
-    <string name="max_hint">max: 2500</string>
+    <string name="max_hint">max: 2000</string>
 
 </resources>
