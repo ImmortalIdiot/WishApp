@@ -1,29 +1,36 @@
 <resources>
     <string name="app_name">Wishes</string>
 
-    <string name="start">start</string>
-    <string name="to_creator">credits</string>
+    <string name="start">Start</string>
+    <string name="to_creator">Credits</string>
     <string name="exit">Exit</string>
 
-    <string name="back">go back</string>
+    <string name="back">Back</string>
 
     <string name="developer">Developer</string>
     <string name="designer">Designer</string>
     <string name="ImmortalIdiot"><a href="ImmortalIdiot">ImmortalIdiot</a></string>
     <string name="Anastasia"><a href="BestPrincess">BestPrincess</a></string>
 
-    <string name="generate_and_copy">generate and copy</string>
+    <string name="generate_and_copy">Generate and copy</string>
 
-    <string name="change_mode">Select a mode</string>
+    <string name="change_mode">Select a mode:</string>
     <string name="emoji_generator">Random love emojis</string>
-    <string name="day_wish_generator">Day wish generator</string>
+    <string name="day_wish_generator_mode">Day wish generator</string>
     <string name="night_wish_generator">Night wish generator</string>
 
     <string name="random_generator_mode">Random generator</string>
-    <string name="number_of_emojis">Enter the number of emojis</string>
-    <string name="min_and_max_hint">min:1 max:2500</string>
+    <string name="number_of_emojis">Number of emojis</string>
+    <string name="min_and_max_hint">1 – 2500</string>
 
     <string name="text_copied_hint">Emojis copied to clipboard</string>
 
     <string name="wish_generator">Generate the wish</string>
+
+    <string name="day_wish_generator">Generate a day wish</string>
+    <string name="from">from:</string>
+    <string name="to">to:</string>
+    <string name="min_hint">min: 1</string>
+    <string name="max_hint">max: 2500</string>
+
 </resources>
