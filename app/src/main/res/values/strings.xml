@@ -28,9 +28,7 @@
     <string name="wish_generator">Generate the wish</string>
 
     <string name="day_wish_generator">Generate a day wish</string>
-    <string name="from">from:</string>
-    <string name="to">to:</string>
-    <string name="min_hint">min: 1</string>
-    <string name="max_hint">max: 2000</string>
+    <string name="day_wish_generator_text_copied_hint">Day wish copied to clipboard</string>
+    <string name="updating_button_text">Refresh</string>
 
 </resources>

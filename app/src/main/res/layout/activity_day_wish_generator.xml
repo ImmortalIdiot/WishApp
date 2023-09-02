@@ -7,9 +7,9 @@
     tools:context=".DayWishGeneratorActivity">
 
     <TextView
-        android:id="@+id/dayWishGenerator"
+        android:id="@+id/dayWishGeneratorMode"
         android:layout_width="331dp"
-        android:layout_height="40dp"
+        android:layout_height="49dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
@@ -24,27 +24,27 @@
         tools:ignore="TextSizeCheck" />
 
     <TextView
-        android:id="@+id/activityDayWishGeneratorHint"
-        android:layout_width="261dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="75dp"
+        android:id="@+id/dayWishGeneratorHint"
+        android:layout_width="351dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="30dp"
         android:gravity="center"
         android:text="@string/number_of_emojis"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dayWishGenerator"
+        app:layout_constraintTop_toBottomOf="@+id/dayWishGeneratorMode"
         tools:ignore="TextSizeCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/valueField"
+        android:id="@+id/dayWishGeneratorValueField"
         android:layout_width="191dp"
         android:layout_height="55dp"
         android:layout_marginStart="110dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="110dp"
         android:digits="0123456789"
         android:fontFamily="@font/tomorrow_light"
@@ -56,11 +56,30 @@
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activityDayWishGeneratorHint"
+        app:layout_constraintTop_toBottomOf="@+id/dayWishGeneratorHint"
         tools:ignore="TextSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/backButton"
+        android:id="@+id/dayWishGeneratorGenerateButton"
+        android:layout_width="281dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/archivo_semibold"
+        android:gravity="center"
+        android:text="@string/generate_and_copy"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayWishGeneratorValueField"
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dayWishGeneratorBackButton"
         android:layout_width="125dp"
         android:layout_height="52dp"
         android:layout_marginStart="143dp"
@@ -69,7 +88,7 @@
         android:background="@drawable/custom_button"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
-        android:onClick="goBack"
+        android:onClick="finishDayWishGeneratorActivity"
         android:text="@string/back"
         android:textAllCaps="false"
         android:textColor="@color/white"

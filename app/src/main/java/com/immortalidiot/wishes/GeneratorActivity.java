@@ -55,7 +55,7 @@ public class GeneratorActivity extends AppCompatActivity {
         });
     }
 
-    private void hideVirtualKeyboard() {
+    void hideVirtualKeyboard() {
         View view = this.getCurrentFocus();
         if (view != null) {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);

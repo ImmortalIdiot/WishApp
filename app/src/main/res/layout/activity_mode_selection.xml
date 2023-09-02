@@ -43,7 +43,7 @@
         tools:ignore="TextSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dayWishGenerator"
+        android:id="@+id/dayWishGeneratorMode"
         android:layout_width="280dp"
         android:layout_height="56dp"
         android:layout_marginStart="79dp"
@@ -78,7 +78,7 @@
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dayWishGenerator"
+        app:layout_constraintTop_toBottomOf="@+id/dayWishGeneratorMode"
         tools:ignore="TextSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
