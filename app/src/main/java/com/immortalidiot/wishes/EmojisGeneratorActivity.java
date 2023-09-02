@@ -39,6 +39,7 @@ public class EmojisGeneratorActivity extends AppCompatActivity {
             if (text.length() != 0) { ClipboardUtils.save(this,
                                       String.valueOf(R.string.text_copied_hint),
                                       wishGenerator.generator(Integer.parseInt(text)));
+                generateButton.setText(R.string.refresh_button_text);
                 Toast.makeText(this, R.string.text_copied_hint, Toast.LENGTH_SHORT).show();}});
     }
 
