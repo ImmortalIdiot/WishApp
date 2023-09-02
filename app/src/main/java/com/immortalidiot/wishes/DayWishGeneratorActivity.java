@@ -15,7 +15,7 @@ public class DayWishGeneratorActivity extends AppCompatActivity {
 
     private final WishGenerator wishGenerator = new WishGenerator();
     private final String dayWish = wishGenerator.getRandomDayWish();
-    private final CharSequence output = "Compliment:" + dayWish;
+    private final CharSequence output = R.string.full_wish + dayWish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
