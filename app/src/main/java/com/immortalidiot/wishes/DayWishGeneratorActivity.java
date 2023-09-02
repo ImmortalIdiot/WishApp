@@ -15,8 +15,6 @@ import com.google.android.material.textfield.TextInputEditText;
 public class DayWishGeneratorActivity extends AppCompatActivity {
 
     private final WishGenerator wishGenerator = new WishGenerator();
-    private final String dayWish = wishGenerator.getRandomDayWish();
-    private final CharSequence output = SystemLanguageUtils.fullWishLocalization() + dayWish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +37,15 @@ public class DayWishGeneratorActivity extends AppCompatActivity {
         final AppCompatButton generateButton = findViewById(R.id.dayWishGeneratorGenerateButton);
 
         generateButton.setOnClickListener(v -> {
+            final String dayWish = wishGenerator.getRandomDayWish();
             final String text = String.valueOf(valueField.getText());
+
             if (text.length() != 0) { ClipboardUtils.save(this,
                                       String.valueOf(R.string.wish_copied_hint),
                                       (dayWish + wishGenerator.generator(Integer.parseInt(text))));
 
                 final TextView dayWishGeneratorTextView = findViewById(R.id.dayWishGeneratorHint);
+                final CharSequence output = SystemLanguageUtils.fullWishLocalization() + dayWish;
                 dayWishGeneratorTextView.setTextSize(20);
                 dayWishGeneratorTextView.setText(output);
                 generateButton.setText(R.string.refresh_button_text);

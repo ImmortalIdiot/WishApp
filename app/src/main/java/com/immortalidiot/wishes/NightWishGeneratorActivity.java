@@ -15,8 +15,6 @@ import com.google.android.material.textfield.TextInputEditText;
 public class NightWishGeneratorActivity extends AppCompatActivity {
 
     private final WishGenerator wishGenerator = new WishGenerator();
-    private final String nightWish = wishGenerator.getRandomNightWish();
-    private final CharSequence output = SystemLanguageUtils.fullWishLocalization() + nightWish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +37,15 @@ public class NightWishGeneratorActivity extends AppCompatActivity {
         final AppCompatButton generateButton = findViewById(R.id.nightWishGenerateButton);
 
         generateButton.setOnClickListener(v -> {
+            final String nightWish = wishGenerator.getRandomNightWish();
             final String text = String.valueOf(valueField.getText());
+
             if (text.length() != 0) { ClipboardUtils.save(this,
                                       String.valueOf(R.string.wish_copied_hint),
                                       (nightWish + wishGenerator.generator(Integer.parseInt(text))));
 
                 final TextView nightWishTextView = findViewById(R.id.nightWishHint);
+                final CharSequence output = SystemLanguageUtils.fullWishLocalization() + nightWish;
                 nightWishTextView.setTextSize(20);
                 nightWishTextView.setText(output);
                 generateButton.setText(R.string.refresh_button_text);
