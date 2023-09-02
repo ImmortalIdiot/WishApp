@@ -13,18 +13,16 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class DayWishGeneratorActivity extends AppCompatActivity {
 
-    private final TextInputEditText valueField = findViewById(R.id.dayWishGeneratorValueField);
     private final WishGenerator wishGenerator = new WishGenerator();
     private final String dayWish = wishGenerator.getRandomDayWish();
     private final CharSequence output = "Compliment:" + dayWish;
-    private final AppCompatButton generateButton = findViewById(R.id.dayWishGeneratorGenerateButton);
-    private final TextView dayWishGeneratorTextView = findViewById(R.id.dayWishGeneratorHint);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_day_wish_generator);
 
+        final TextInputEditText valueField = findViewById(R.id.dayWishGeneratorValueField);
         valueField.setTransformationMethod(new NumericKeyBoardTransformation());
 
         int MIN_LENGTH = 1;
@@ -37,14 +35,18 @@ public class DayWishGeneratorActivity extends AppCompatActivity {
             if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
                 InputMethodUtils.hideVirtualKeyboard(this); } return false; });
 
+        final AppCompatButton generateButton = findViewById(R.id.dayWishGeneratorGenerateButton);
+
         generateButton.setOnClickListener(v -> {
             final String text = String.valueOf(valueField.getText());
             if (text.length() != 0) { ClipboardUtils.save(this,
                                       String.valueOf(R.string.wish_copied_hint),
                                       (dayWish + wishGenerator.generator(Integer.parseInt(text))));
-                                      dayWishGeneratorTextView.setTextSize(20);
-                                      dayWishGeneratorTextView.setText(output);
-                                      generateButton.setText(R.string.refresh_button_text); }});
+
+                final TextView dayWishGeneratorTextView = findViewById(R.id.dayWishGeneratorHint);
+                dayWishGeneratorTextView.setTextSize(20);
+                dayWishGeneratorTextView.setText(output);
+                generateButton.setText(R.string.refresh_button_text); }});
     }
 
     public void finishActivity(View view) { finish(); }

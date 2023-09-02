@@ -10,19 +10,16 @@ import android.view.View;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-
-
 public class EmojisGeneratorActivity extends AppCompatActivity {
 
-    private final TextInputEditText valueField = findViewById(R.id.valueField);
     private final WishGenerator wishGenerator = new WishGenerator();
-    private final AppCompatButton generateButton = findViewById(R.id.generateButton);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emoji_generator);
 
+        final TextInputEditText valueField = findViewById(R.id.valueField);
         valueField.setTransformationMethod(new NumericKeyBoardTransformation());
 
         int MIN_LENGTH = 1;
@@ -35,6 +32,7 @@ public class EmojisGeneratorActivity extends AppCompatActivity {
             if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
                 InputMethodUtils.hideVirtualKeyboard(this); } return false; });
 
+        final AppCompatButton generateButton = findViewById(R.id.generateButton);
         generateButton.setOnClickListener(v -> {
             final String text = String.valueOf(valueField.getText());
             if (text.length() != 0) { ClipboardUtils.save(this,
