@@ -16,13 +16,11 @@ public class InputFilter implements android.text.InputFilter {
     public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
         try {
             int input = Integer.parseInt(dest.toString() + source.toString());
-            if (isInRange(min, max, input)) return null;
-        } catch (NumberFormatException ignored) {
-        }
+            if (isInRange(min, max, input)) return null; }
+        catch (NumberFormatException ignored) {}
         return "";
     }
 
     private boolean isInRange(int min, int max, int input) {
-        return max > min ? input >= min && input <= max : input >= max && input <= min;
-    }
+        return max > min ? input >= min && input <= max : input >= max && input <= min; }
 }

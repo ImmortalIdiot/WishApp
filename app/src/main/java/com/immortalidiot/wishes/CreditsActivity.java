@@ -19,16 +19,16 @@ public class CreditsActivity extends AppCompatActivity {
         try {
             Intent telegram = new Intent(Intent.ACTION_VIEW);
             telegram.setData(Uri.parse("https://t.me/Immortal_Idiot"));
-            startActivity(telegram);
-        } catch (Exception e) { throw new RuntimeException(e); }
+            startActivity(telegram); }
+        catch (Exception e) { throw new RuntimeException(e); }
     }
 
     public void telegramBestPrincess(View v) {
         try {
             Intent telegram = new Intent(Intent.ACTION_VIEW);
             telegram.setData(Uri.parse("https://t.me/+79102632122"));
-            startActivity(telegram);
-        } catch (Exception e) { throw new RuntimeException(e); }
+            startActivity(telegram); }
+        catch (Exception e) { throw new RuntimeException(e); }
     }
 
 

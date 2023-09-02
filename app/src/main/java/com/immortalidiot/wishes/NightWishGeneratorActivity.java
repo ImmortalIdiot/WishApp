@@ -15,11 +15,13 @@ public class NightWishGeneratorActivity extends AppCompatActivity {
 
     final int MIN_LENGTH = 1;
     final int MAX_LENGTH = 2000;
-    WishGenerator wishGenerator = new WishGenerator();
-    TextInputEditText valueField = findViewById(R.id.nightWishValueField);
-    TextView nightWishTextView = findViewById(R.id.nightWishHint);
-    AppCompatButton generateButton = findViewById(R.id.nightWishGenerateButton);
-    CharSequence output;
+    private final TextInputEditText valueField = findViewById(R.id.nightWishValueField);
+    private final int text = Integer.parseInt(String.valueOf(valueField.getText()));
+    private final WishGenerator wishGenerator = new WishGenerator();
+    private final TextView nightWishTextView = findViewById(R.id.nightWishHint);
+    private final AppCompatButton generateButton = findViewById(R.id.nightWishGenerateButton);
+    private final String nightWish = wishGenerator.getRandomNightWish();
+    private final CharSequence output = "Compliment" + nightWish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,31 +32,18 @@ public class NightWishGeneratorActivity extends AppCompatActivity {
         valueField.setFilters(new InputFilter[] {
                 new com.immortalidiot.wishes.InputFilter(MIN_LENGTH, MAX_LENGTH)});
 
-        valueField.setOnEditorActionListener(((v, actionId, event) -> {
+        valueField.setOnEditorActionListener((v, actionId, event) -> {
             if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
-                new EmojisGeneratorActivity().hideVirtualKeyboard(); }
-            return false;
-        }));
-
+                InputMethodUtils.hideVirtualKeyboard(this); } return false; });
 
         generateButton.setOnClickListener(v -> {
-            int text = Integer.parseInt(String.valueOf(valueField.getText()));
-            if (text != 0) {
-                String nightWish = wishGenerator.getRandomNightWish();
-
-                new EmojisGeneratorActivity().save(String.valueOf(R.string.wish_copied_hint),
-                        nightWish + wishGenerator.generator(text));
-
-                output = "Compliment" + nightWish;
-                nightWishTextView.setTextSize(20);
-                nightWishTextView.setText(output);
-                generateButton.setText(R.string.refresh_button_text);
-            }
-        });
+            if (text != 0) { ClipboardUtils.save(this,
+                             String.valueOf(R.string.wish_copied_hint),
+                             (nightWish + wishGenerator.generator(text)));
+                             nightWishTextView.setTextSize(20);
+                             nightWishTextView.setText(output);
+                             generateButton.setText(R.string.refresh_button_text); }});
     }
 
-
-    public void finishActivity(View view) {
-        finish();
-    }
+    public void finishActivity(View view) { finish(); }
 }
