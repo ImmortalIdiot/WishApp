@@ -15,7 +15,6 @@ import com.google.android.material.textfield.TextInputEditText;
 public class EmojisGeneratorActivity extends AppCompatActivity {
 
     private final TextInputEditText valueField = findViewById(R.id.valueField);
-    private final int text = Integer.parseInt(String.valueOf(valueField.getText()));
     private final WishGenerator wishGenerator = new WishGenerator();
     private final AppCompatButton generateButton = findViewById(R.id.generateButton);
 
@@ -30,17 +29,17 @@ public class EmojisGeneratorActivity extends AppCompatActivity {
         int MAX_LENGTH = 2000;
 
         valueField.setFilters(new InputFilter[]{
-                new com.immortalidiot.wishes.InputFilter(MIN_LENGTH, MAX_LENGTH)
-        });
+                new com.immortalidiot.wishes.InputFilter(MIN_LENGTH, MAX_LENGTH)});
 
         valueField.setOnEditorActionListener((v, actionId, event) -> {
             if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
                 InputMethodUtils.hideVirtualKeyboard(this); } return false; });
 
         generateButton.setOnClickListener(v -> {
-            if (text != 0) { ClipboardUtils.save(this,
-                             String.valueOf(R.string.text_copied_hint),
-                             wishGenerator.generator(text)); }});
+            final String text = String.valueOf(valueField.getText());
+            if (text.length() != 0) { ClipboardUtils.save(this,
+                                      String.valueOf(R.string.text_copied_hint),
+                                      wishGenerator.generator(Integer.parseInt(text))); }});
     }
 
     public void finishActivity(View v) { finish(); }

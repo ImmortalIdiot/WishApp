@@ -14,7 +14,6 @@ import com.google.android.material.textfield.TextInputEditText;
 public class DayWishGeneratorActivity extends AppCompatActivity {
 
     private final TextInputEditText valueField = findViewById(R.id.dayWishGeneratorValueField);
-    private final int text = Integer.parseInt(String.valueOf(valueField.getText()));
     private final WishGenerator wishGenerator = new WishGenerator();
     private final String dayWish = wishGenerator.getRandomDayWish();
     private final CharSequence output = "Compliment:" + dayWish;
@@ -39,12 +38,13 @@ public class DayWishGeneratorActivity extends AppCompatActivity {
                 InputMethodUtils.hideVirtualKeyboard(this); } return false; });
 
         generateButton.setOnClickListener(v -> {
-            if (text != 0) { ClipboardUtils.save(this,
-                             String.valueOf(R.string.wish_copied_hint),
-                             (dayWish + wishGenerator.generator(text)));
-                             dayWishGeneratorTextView.setTextSize(20);
-                             dayWishGeneratorTextView.setText(output);
-                             generateButton.setText(R.string.refresh_button_text); }});
+            final String text = String.valueOf(valueField.getText());
+            if (text.length() != 0) { ClipboardUtils.save(this,
+                                      String.valueOf(R.string.wish_copied_hint),
+                                      (dayWish + wishGenerator.generator(Integer.parseInt(text))));
+                                      dayWishGeneratorTextView.setTextSize(20);
+                                      dayWishGeneratorTextView.setText(output);
+                                      generateButton.setText(R.string.refresh_button_text); }});
     }
 
     public void finishActivity(View view) { finish(); }
