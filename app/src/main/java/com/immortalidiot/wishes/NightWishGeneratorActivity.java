@@ -16,7 +16,7 @@ public class NightWishGeneratorActivity extends AppCompatActivity {
 
     private final WishGenerator wishGenerator = new WishGenerator();
     private final String nightWish = wishGenerator.getRandomNightWish();
-    private final CharSequence output = R.string.full_wish + nightWish;
+    private final CharSequence output = SystemLanguageUtils.fullWishLocalization() + nightWish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
