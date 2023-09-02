@@ -1,33 +1,31 @@
 <resources>
     <string name="app_name">Wishes</string>
 
-    <string name="creators">About</string>
-    <string name="back">Back</string>
+    <string name="creators">О программе</string>
+    <string name="back">Назад</string>
 
-    <string name="developer">Developer</string>
-    <string name="designer">Designer</string>
+    <string name="developer">Разработчик</string>
+    <string name="designer">Дизайнер</string>
     <string name="ImmortalIdiot"><a href="ImmortalIdiot">ImmortalIdiot</a></string>
     <string name="Anastasia"><a href="BestPrincess">BestPrincess</a></string>
 
-    <string name="generate">Generate</string>
+    <string name="generate">Сгенерировать</string>
 
-    <string name="change_mode">Select a mode:</string>
-    <string name="emoji_generator">Random love emojis</string>
-    <string name="day_wish_generator_mode">Day wish generator</string>
-    <string name="night_wish_generator_mode">Night wish generator</string>
+    <string name="change_mode">Выберите режим:</string>
+    <string name="emoji_generator">Генерация эмоджи</string>
+    <string name="day_wish_generator_mode">Дневное пожелание</string>
+    <string name="night_wish_generator_mode">Ночное пожелание</string>
 
-    <string name="random_generator_mode">Random generator</string>
-    <string name="number_of_emojis">Number of emojis</string>
+    <string name="random_generator_mode">Случайный генератор</string>
+    <string name="number_of_emojis">Количество эмоджи</string>
     <string name="min_and_max_hint">1 – 2000</string>
 
-    <string name="text_copied_hint">Emojis copied to clipboard</string>
+    <string name="text_copied_hint">Эмоджи скопированы в буфер обмена</string>
 
-    <string name="full_wish">Wish: </string>
-
-    <string name="day_wish_generator">Day wish</string>
-    <string name="night_wish_generator">Night wish</string>
-    <string name="wish_copied_hint">The wish has been copied to the clipboard</string>
-    <string name="refresh_button_text">Refresh</string>
+    <string name="day_wish_generator">Дневное пожелание</string>
+    <string name="night_wish_generator">Ночное пожелание</string>
+    <string name="wish_copied_hint">Пожелание скопировано в буфер обмена</string>
+    <string name="refresh_button_text">Обновить</string>
 
 
 </resources>
