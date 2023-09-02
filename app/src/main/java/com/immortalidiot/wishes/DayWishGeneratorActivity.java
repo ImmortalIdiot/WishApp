@@ -47,6 +47,7 @@ public class DayWishGeneratorActivity extends AppCompatActivity {
         generateButton.setOnClickListener(v -> {
             String text = String.valueOf(valueField.getText());
             if (text.length() != 0) {
+
                 String copyHint = String.valueOf(R.string.wish_copied_hint);
                 String dayWish = wishGenerator.getRandomDayWish();
 
@@ -58,8 +59,6 @@ public class DayWishGeneratorActivity extends AppCompatActivity {
                 dayWishGeneratorTextView.setTextSize(20);
                 dayWishGeneratorTextView.setText("Compliment: " + dayWish);
                 generateButton.setText(R.string.refresh_button_text);
-
-
             }
         });
     }

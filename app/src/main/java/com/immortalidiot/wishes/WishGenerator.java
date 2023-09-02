@@ -14,7 +14,7 @@ public class WishGenerator {
     static final List<String> dayList = new ArrayList<>(Arrays.asList("Доброе утро", "Доброе утречко",
             "С добрым утречком", "С добрым утром"));
 
-    static List<String> nightList = new ArrayList<>(Arrays.asList("Споки ноки", "Спокойной ночи",
+    static final List<String> nightList = new ArrayList<>(Arrays.asList("Споки ноки", "Спокойной ночи",
             "Спокойной ночки", "Сладких снов"));
 
     static final List<String> compliments = new ArrayList<>(Arrays.asList("моя киса", "моя принцесса", "моя зайка",
@@ -47,9 +47,9 @@ public class WishGenerator {
 
     public String getRandomDayWish() {
         int chance = getRandomIntegerValue();
+        dayWish = getRandomElement(dayList);
 
-        if (chance >= 140)  dayWish = getRandomElement(dayList);
-        else dayWish = getRandomElement(dayList) + ", " + getRandomElement(compliments);
+        if (chance < 140)  dayWish += ", " + getRandomElement(compliments);
 
         return dayWish;
     }

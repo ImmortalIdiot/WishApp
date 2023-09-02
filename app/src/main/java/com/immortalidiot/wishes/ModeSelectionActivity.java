@@ -26,7 +26,5 @@ public class ModeSelectionActivity extends AppCompatActivity {
         startActivity(new Intent (this, NightWishGeneratorActivity.class));
     }
 
-    public void goBack(View v) {
-        finish();
-    }
+    public void finishActivity(View v) { finish(); }
 }

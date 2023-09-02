@@ -24,8 +24,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CreditsActivity.class);
         startActivity(intent);
     }
-
-    public void exitWithoutConfirmation(View v) {
-        finishAffinity();
-    }
 }

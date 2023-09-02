@@ -31,7 +31,6 @@ public class CreditsActivity extends AppCompatActivity {
         } catch (Exception e) { throw new RuntimeException(e); }
     }
 
-    public void goBack(View v) {
-        finish();
-    }
+
+    public void finishActivity(View view) { this.finish(); }
 }

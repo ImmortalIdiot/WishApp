@@ -12,11 +12,6 @@ public class InputFilter implements android.text.InputFilter {
         this.max = max;
     }
 
-    public InputFilter(String min, String max) {
-        this.min = Integer.parseInt(min);
-        this.max = Integer.parseInt(max);
-    }
-
     @Override
     public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
         try {
@@ -29,9 +24,5 @@ public class InputFilter implements android.text.InputFilter {
 
     private boolean isInRange(int min, int max, int input) {
         return max > min ? input >= min && input <= max : input >= max && input <= min;
-    }
-
-    int clamp(int v, int min, int max) {
-        return v > max ? max : (Math.max(v, min));
     }
 }

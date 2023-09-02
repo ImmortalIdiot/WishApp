@@ -17,42 +17,34 @@ import com.google.android.material.textfield.TextInputEditText;
 
 
 public class EmojisGeneratorActivity extends AppCompatActivity {
+
+    int MIN_LENGTH = 1;
+    int MAX_LENGTH = 2000;
+    WishGenerator wishGenerator = new WishGenerator();
+    TextInputEditText valueField = findViewById(R.id.valueField);
+    int text = Integer.parseInt(String.valueOf(valueField.getText()));
+    AppCompatButton generateButton = findViewById(R.id.generateButton);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_generator);
-
-        TextInputEditText valueField = findViewById(R.id.valueField);
-
+        setContentView(R.layout.activity_emoji_generator);
 
         valueField.setTransformationMethod(new NumericKeyBoardTransformation());
 
         valueField.setFilters(new InputFilter[]{
-                new com.immortalidiot.wishes.InputFilter(1, 2000)
+                new com.immortalidiot.wishes.InputFilter(MIN_LENGTH, MAX_LENGTH)
         });
 
         valueField.setOnEditorActionListener((v, actionId, event) -> {
             if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
-                hideVirtualKeyboard();
-            }
+                hideVirtualKeyboard(); }
             return false;
         });
 
-        AppCompatButton generateButton = findViewById(R.id.generateButton);
-
-        generateButton.setOnClickListener(v -> {
-            String text = String.valueOf(valueField.getText());
-            if (text.length() != 0) {
-                int value = Integer.parseInt(text);
-                String copyHint = String.valueOf(R.string.text_copied_hint);
-
-                WishGenerator generate = new WishGenerator();
-
-                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText(copyHint, generate.generator(value));
-                clipboard.setPrimaryClip(clip);
-            }
-        });
+        generateButton.
+                setOnClickListener(v -> { if (text != 0) {
+                    save(String.valueOf(R.string.text_copied_hint), wishGenerator.generator(text)); }});
     }
 
     void hideVirtualKeyboard() {
@@ -63,7 +55,11 @@ public class EmojisGeneratorActivity extends AppCompatActivity {
         }
     }
 
-    public void finishActivity(View v) {
-        finish();
+    void save(String hint, CharSequence copiedText) {
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText(hint, copiedText);
+        clipboard.setPrimaryClip(clip);
     }
+
+    public void finishActivity(View v) { finish(); }
 }
