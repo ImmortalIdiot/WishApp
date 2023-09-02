@@ -86,7 +86,7 @@
         android:background="@drawable/custom_button"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
-        android:onClick="goBack"
+        android:onClick="finishActivity"
         android:text="@string/back"
         android:textAllCaps="false"
         android:textColor="@color/white"

@@ -13,15 +13,17 @@
         android:theme="@style/Theme.Wishes"
         tools:targetApi="31">
         <activity
+            android:name=".NightWishGeneratorActivity"
+            android:exported="false" />
+        <activity
             android:name=".DayWishGeneratorActivity"
             android:exported="false" />
-
         <activity
             android:name=".ModeSelectionActivity"
             android:exported="false"
             android:launchMode="singleTask" />
         <activity
-            android:name=".GeneratorActivity"
+            android:name=".EmojisGeneratorActivity"
             android:exported="false"
             android:launchMode="singleTask" />
         <activity

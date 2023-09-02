@@ -79,7 +79,7 @@
         tools:ignore="TextSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dayWishGeneratorBackButton"
+        android:id="@+id/nightWishBackButton"
         android:layout_width="125dp"
         android:layout_height="52dp"
         android:layout_marginStart="143dp"
@@ -88,7 +88,7 @@
         android:background="@drawable/custom_button"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
-        android:onClick="finishDayWishGeneratorActivity"
+        android:onClick="finishActivity"
         android:text="@string/back"
         android:textAllCaps="false"
         android:textColor="@color/white"

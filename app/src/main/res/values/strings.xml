@@ -17,7 +17,7 @@
     <string name="change_mode">Select a mode:</string>
     <string name="emoji_generator">Random love emojis</string>
     <string name="day_wish_generator_mode">Day wish generator</string>
-    <string name="night_wish_generator">Night wish generator</string>
+    <string name="night_wish_generator_mode">Night wish generator</string>
 
     <string name="random_generator_mode">Random generator</string>
     <string name="number_of_emojis">Number of emojis</string>
@@ -28,7 +28,9 @@
     <string name="wish_generator">Generate the wish</string>
 
     <string name="day_wish_generator">Generate a day wish</string>
-    <string name="day_wish_generator_text_copied_hint">Day wish copied to clipboard</string>
-    <string name="updating_button_text">Refresh</string>
+    <string name="wish_copied_hint">The wish has been copied to the clipboard</string>
+    <string name="refresh_button_text">Refresh</string>
+
+    <string name="night_wish_generator">Generate a night wish</string>
 
 </resources>

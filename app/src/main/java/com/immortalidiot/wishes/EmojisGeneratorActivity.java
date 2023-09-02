@@ -16,7 +16,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 
 
-public class GeneratorActivity extends AppCompatActivity {
+public class EmojisGeneratorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +63,7 @@ public class GeneratorActivity extends AppCompatActivity {
         }
     }
 
-    public void goBack(View v) {
+    public void finishActivity(View v) {
         finish();
     }
 }

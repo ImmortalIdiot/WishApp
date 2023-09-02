@@ -15,11 +15,15 @@ public class ModeSelectionActivity extends AppCompatActivity {
     }
 
     public void switchToGeneratorActivity(View v) {
-        startActivity(new Intent(this, GeneratorActivity.class));
+        startActivity(new Intent(this, EmojisGeneratorActivity.class));
     }
 
     public void switchToDayWishGeneratorActivity(View v) {
         startActivity(new Intent(this, DayWishGeneratorActivity.class));
+    }
+
+    public void switchToNightWishGeneratorActivity(View v) {
+        startActivity(new Intent (this, NightWishGeneratorActivity.class));
     }
 
     public void goBack(View v) {

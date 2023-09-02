@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GeneratorActivity">
+    tools:context=".EmojisGeneratorActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/generateButton"
@@ -35,7 +35,7 @@
         android:background="@drawable/custom_button"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
-        android:onClick="goBack"
+        android:onClick="finishActivity"
         android:text="@string/back"
         android:textAllCaps="false"
         android:textColor="@color/white"
