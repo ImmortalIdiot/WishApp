@@ -26,5 +26,10 @@ public class ModeSelectionActivity extends AppCompatActivity {
         startActivity(new Intent (this, NightWishGeneratorActivity.class));
     }
 
+    public void switchToCreditsActivity(View v) {
+        Intent intent = new Intent(this, CreditsActivity.class);
+        startActivity(intent);
+    }
+
     public void finishActivity(View v) { finish(); }
 }

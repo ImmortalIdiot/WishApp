@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">Wishes</string>
 
-    <string name="start">Start</string>
-    <string name="to_creator">Credits</string>
-    <string name="exit">Exit</string>
-
+    <string name="creators">About</string>
     <string name="back">Back</string>
 
     <string name="developer">Developer</string>
@@ -12,7 +9,7 @@
     <string name="ImmortalIdiot"><a href="ImmortalIdiot">ImmortalIdiot</a></string>
     <string name="Anastasia"><a href="BestPrincess">BestPrincess</a></string>
 
-    <string name="generate_and_copy">Generate and copy</string>
+    <string name="generate">Generate</string>
 
     <string name="change_mode">Select a mode:</string>
     <string name="emoji_generator">Random love emojis</string>
@@ -25,12 +22,12 @@
 
     <string name="text_copied_hint">Emojis copied to clipboard</string>
 
-    <string name="wish_generator">Generate the wish</string>
+    <string name="full_wish">Wish: </string>
 
-    <string name="day_wish_generator">Generate a day wish</string>
+    <string name="day_wish_generator">Day wish</string>
+    <string name="night_wish_generator">Night wish</string>
     <string name="wish_copied_hint">The wish has been copied to the clipboard</string>
     <string name="refresh_button_text">Refresh</string>
 
-    <string name="night_wish_generator">Generate a night wish</string>
 
 </resources>
