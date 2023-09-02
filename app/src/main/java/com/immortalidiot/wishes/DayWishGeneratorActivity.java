@@ -8,6 +8,7 @@ import android.text.InputFilter;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -46,7 +47,8 @@ public class DayWishGeneratorActivity extends AppCompatActivity {
                 final TextView dayWishGeneratorTextView = findViewById(R.id.dayWishGeneratorHint);
                 dayWishGeneratorTextView.setTextSize(20);
                 dayWishGeneratorTextView.setText(output);
-                generateButton.setText(R.string.refresh_button_text); }});
+                generateButton.setText(R.string.refresh_button_text);
+                Toast.makeText(this, R.string.wish_copied_hint, Toast.LENGTH_SHORT).show();}});
     }
 
     public void finishActivity(View view) { finish(); }

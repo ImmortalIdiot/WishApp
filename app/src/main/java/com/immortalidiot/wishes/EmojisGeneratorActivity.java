@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -37,7 +38,8 @@ public class EmojisGeneratorActivity extends AppCompatActivity {
             final String text = String.valueOf(valueField.getText());
             if (text.length() != 0) { ClipboardUtils.save(this,
                                       String.valueOf(R.string.text_copied_hint),
-                                      wishGenerator.generator(Integer.parseInt(text))); }});
+                                      wishGenerator.generator(Integer.parseInt(text)));
+                Toast.makeText(this, R.string.text_copied_hint, Toast.LENGTH_SHORT).show();}});
     }
 
     public void finishActivity(View v) { finish(); }
