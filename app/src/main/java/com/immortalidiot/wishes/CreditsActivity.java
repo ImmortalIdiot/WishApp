@@ -26,7 +26,7 @@ public class CreditsActivity extends AppCompatActivity {
     public void telegramBestPrincess(View v) {
         try {
             Intent telegram = new Intent(Intent.ACTION_VIEW);
-            telegram.setData(Uri.parse("https://t.me/+79102632122"));
+            telegram.setData(Uri.parse("https://t.me/kipish_080"));
             startActivity(telegram); }
         catch (Exception e) { throw new RuntimeException(e); }
     }
