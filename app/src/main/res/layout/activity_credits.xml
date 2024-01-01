@@ -6,75 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".CreditsActivity">
 
-
-    <TextView
-        android:id="@+id/developers"
-        android:layout_width="225dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="189dp"
-        android:layout_marginEnd="93dp"
-        android:fontFamily="@font/archivo_semibold"
+    <LinearLayout
+        android:id="@+id/creditsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:gravity="center"
-        android:text="@string/developer"
-        android:textColor="@color/white"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/ImmortalIdiotTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextSizeCheck" />
-
-    <TextView
-        android:id="@+id/ImmortalIdiotTextView"
-        android:layout_width="225dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="93dp"
-        android:layout_marginEnd="93dp"
-        android:fontFamily="@font/archivo_semibold"
-        android:gravity="center"
-        android:onClick="telegramImmortalIdiot"
-        android:text="@string/ImmortalIdiot"
-        android:textColor="@color/white"
-        android:textColorLink="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/developers" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:id="@+id/designer"
-        android:layout_width="225dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="93dp"
-        android:layout_marginEnd="93dp"
-        android:fontFamily="@font/archivo_semibold"
-        android:gravity="center"
-        android:text="@string/designer"
-        android:textColor="@color/white"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImmortalIdiotTextView"
-        tools:ignore="TextSizeCheck" />
+        <TextView
+            android:id="@+id/developers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo_semibold"
+            android:gravity="center"
+            android:text="@string/developer"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/ImmortalIdiotTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
 
+        <TextView
+            android:id="@+id/ImmortalIdiotTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/archivo_semibold"
+            android:gravity="center"
+            android:onClick="telegramImmortalIdiot"
+            android:text="@string/ImmortalIdiot"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/developers" />
 
-    <TextView
-        android:id="@+id/BestPrincessTextView"
-        android:layout_width="225dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="93dp"
-        android:layout_marginEnd="93dp"
-        android:fontFamily="@font/archivo_semibold"
-        android:gravity="center"
-        android:onClick="telegramBestPrincess"
-        android:text="@string/Anastasia"
-        android:textColor="@color/white"
-        android:textColorLink="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/designer" />
+        <TextView
+            android:id="@+id/designer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/archivo_semibold"
+            android:gravity="center"
+            android:text="@string/designer"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImmortalIdiotTextView"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/BestPrincessTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/archivo_semibold"
+            android:gravity="center"
+            android:onClick="telegramBestPrincess"
+            android:text="@string/Anastasia"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/designer" />
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backButton"
@@ -95,5 +97,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
