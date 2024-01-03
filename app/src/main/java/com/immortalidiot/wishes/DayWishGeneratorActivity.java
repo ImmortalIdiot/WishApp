@@ -1,14 +1,14 @@
 package com.immortalidiot.wishes;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -32,7 +32,8 @@ public class DayWishGeneratorActivity extends AppCompatActivity {
 
         valueField.setOnEditorActionListener((v, actionId, event) -> {
             if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
-                InputMethodUtils.hideVirtualKeyboard(this); } return false; });
+                View view = getCurrentFocus();
+                InputMethodUtils.hideVirtualKeyboard(view); } return false; });
 
         final AppCompatButton generateButton = findViewById(R.id.dayWishGeneratorGenerateButton);
 

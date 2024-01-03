@@ -1,10 +1,10 @@
 package com.immortalidiot.wishes;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ModeSelectionActivity extends AppCompatActivity {
 
@@ -12,10 +12,6 @@ public class ModeSelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode_selection);
-    }
-
-    public void switchToGeneratorActivity(View v) {
-        startActivity(new Intent(this, EmojisGeneratorActivity.class));
     }
 
     public void switchToDayWishGeneratorActivity(View v) {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmojisGeneratorActivity">
+    tools:context=".ui.EmojisGeneratorFragment">
 
     <TextView
         android:id="@+id/randomGeneratorMode"
@@ -68,6 +68,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/generateButton"
             android:layout_width="wrap_content"
+            android:minWidth="221dp"
             android:layout_height="56dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/custom_button"
@@ -87,19 +88,16 @@
         android:id="@+id/backButton"
         android:layout_width="125dp"
         android:layout_height="52dp"
-        android:layout_marginStart="143dp"
-        android:layout_marginEnd="143dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
-        android:onClick="finishActivity"
         android:text="@string/back"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="TextSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
