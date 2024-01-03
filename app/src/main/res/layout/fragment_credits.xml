@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreditsActivity">
+    tools:context=".ui.CreditsFragment">
 
     <LinearLayout
         android:id="@+id/creditsContainer"
@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:id="@+id/developers"
+            android:id="@+id/developer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/archivo_semibold"
@@ -33,12 +33,11 @@
             tools:ignore="TextSizeCheck" />
 
         <TextView
-            android:id="@+id/ImmortalIdiotTextView"
+            android:id="@+id/ImmortalIdiot_textView"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:fontFamily="@font/archivo_semibold"
             android:gravity="center"
-            android:onClick="telegramImmortalIdiot"
             android:text="@string/ImmortalIdiot"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -63,12 +62,11 @@
             tools:ignore="TextSizeCheck" />
 
         <TextView
-            android:id="@+id/BestPrincessTextView"
+            android:id="@+id/kipish080_textView"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:fontFamily="@font/archivo_semibold"
             android:gravity="center"
-            android:onClick="telegramBestPrincess"
             android:text="@string/Anastasia"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -82,13 +80,10 @@
         android:id="@+id/backButton"
         android:layout_width="125dp"
         android:layout_height="52dp"
-        android:layout_marginStart="143dp"
-        android:layout_marginEnd="143dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
-        android:onClick="finishActivity"
         android:text="@string/back"
         android:textAllCaps="false"
         android:textColor="@color/white"

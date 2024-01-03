@@ -1,6 +1,5 @@
 package com.immortalidiot.wishes;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -12,11 +11,6 @@ public class ModeSelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode_selection);
-    }
-
-    public void switchToCreditsActivity(View v) {
-        Intent intent = new Intent(this, CreditsActivity.class);
-        startActivity(intent);
     }
 
     public void finishActivity(View v) { finish(); }

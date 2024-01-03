@@ -34,6 +34,12 @@ public class ModeSelectionFragment extends FragmentUtils {
                 fragment.changeFragment(new NightWishGeneratorFragment(), true);
             }
         });
+
+        binding.creditsButton.setOnClickListener(v -> {
+            if (fragment != null) {
+                fragment.changeFragment(new CreditsFragment(), true);
+            }
+        });
         return view;
     }
 

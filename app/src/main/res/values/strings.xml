@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Wishes</string>
 
-    <string name="creators">О программе</string>
+    <string name="creators">Разработчики</string>
     <string name="back">Назад</string>
 
     <string name="developer">Разработчик</string>
     <string name="designer">Дизайнер</string>
     <string name="ImmortalIdiot"><a href="ImmortalIdiot">ImmortalIdiot</a></string>
-    <string name="Anastasia"><a href="kipish_080">kipish_080</a></string>
+    <string name="kipish_080"><a href="kipish_080">kipish_080</a></string>
 
     <string name="generate">Сгенерировать</string>
 
@@ -26,6 +26,4 @@
     <string name="night_wish_generator">Ночное пожелание</string>
     <string name="wish_copied_hint">Пожелание скопировано в буфер обмена</string>
     <string name="refresh_button_text">Обновить</string>
-
-
 </resources>
