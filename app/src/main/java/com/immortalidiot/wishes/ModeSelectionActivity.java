@@ -14,10 +14,6 @@ public class ModeSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mode_selection);
     }
 
-    public void switchToNightWishGeneratorActivity(View v) {
-        startActivity(new Intent (this, NightWishGeneratorActivity.class));
-    }
-
     public void switchToCreditsActivity(View v) {
         Intent intent = new Intent(this, CreditsActivity.class);
         startActivity(intent);

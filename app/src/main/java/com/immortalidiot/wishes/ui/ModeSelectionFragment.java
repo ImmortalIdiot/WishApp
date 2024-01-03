@@ -28,6 +28,12 @@ public class ModeSelectionFragment extends FragmentUtils {
                 fragment.changeFragment(new DayWishGeneratorFragment(), true);
             }
         });
+
+        binding.nightWishGeneratorMode.setOnClickListener(v -> {
+            if (fragment != null) {
+                fragment.changeFragment(new NightWishGeneratorFragment(), true);
+            }
+        });
         return view;
     }
 
