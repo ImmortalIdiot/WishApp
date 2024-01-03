@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DayWishGeneratorActivity">
+    tools:context=".ui.DayWishGeneratorFragment">
 
     <TextView
         android:id="@+id/dayWishGeneratorMode"
@@ -68,6 +68,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/dayWishGeneratorGenerateButton"
             android:layout_width="wrap_content"
+            android:minWidth="221dp"
             android:layout_height="56dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/custom_button"
@@ -84,16 +85,13 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/nightWishBackButton"
+        android:id="@+id/dayWishBackButton"
         android:layout_width="125dp"
         android:layout_height="52dp"
-        android:layout_marginStart="143dp"
-        android:layout_marginEnd="143dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/archivo_semibold"
         android:gravity="center"
-        android:onClick="finishActivity"
         android:text="@string/back"
         android:textAllCaps="false"
         android:textColor="@color/white"

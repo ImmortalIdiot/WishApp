@@ -22,6 +22,12 @@ public class ModeSelectionFragment extends FragmentUtils {
                 fragment.changeFragment(new EmojisGeneratorFragment(), true);
             }
         });
+
+        binding.dayWishGeneratorMode.setOnClickListener(v -> {
+            if (fragment != null) {
+                fragment.changeFragment(new DayWishGeneratorFragment(), true);
+            }
+        });
         return view;
     }
 
