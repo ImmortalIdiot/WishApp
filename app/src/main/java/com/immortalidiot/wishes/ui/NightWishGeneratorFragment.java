@@ -21,7 +21,7 @@ import com.immortalidiot.wishes.databinding.FragmentNightWishGeneratorBinding;
 
 public class NightWishGeneratorFragment extends BaseFragment {
     FragmentNightWishGeneratorBinding binding;
-    WishGenerator generator = new WishGenerator();
+    WishGenerator generator;
     CallbackFragment fragment;
 
     @Override
@@ -45,6 +45,7 @@ public class NightWishGeneratorFragment extends BaseFragment {
         });
 
         binding.nightWishGenerateButton.setOnClickListener(v -> {
+            generator = new WishGenerator();
             final String wish = generator.getRandomNightWish();
             final String emojis = String.valueOf(valueField.getText());
 
@@ -55,10 +56,11 @@ public class NightWishGeneratorFragment extends BaseFragment {
                         .show();
             } else {
                 if (getContext() != null) {
-                    final int numberOfEmojis = Integer.parseInt(emojis);
+                    final String fullExpression = wish +
+                            generator.generator(Integer.parseInt(emojis));
                     ClipboardUtils.save(getContext(),
                             String.valueOf(R.string.wish_copied_hint),
-                            (wish + generator.generator(numberOfEmojis)));
+                            fullExpression);
 
                     final TextView nightWishGeneratorTextView = binding.nightWishHint;
                     final String output = "Комплимент: " + wish;

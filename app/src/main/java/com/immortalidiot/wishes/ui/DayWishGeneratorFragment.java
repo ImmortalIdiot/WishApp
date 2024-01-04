@@ -21,7 +21,7 @@ import com.immortalidiot.wishes.logic.WishGenerator;
 
 public class DayWishGeneratorFragment extends BaseFragment {
     FragmentDayWishGeneratorBinding binding;
-    WishGenerator generator = new WishGenerator();
+    WishGenerator generator;
     CallbackFragment fragment;
 
     @Override
@@ -44,6 +44,7 @@ public class DayWishGeneratorFragment extends BaseFragment {
                 new com.immortalidiot.wishes.logic.InputFilter(MIN_LENGTH, MAX_LENGTH)});
 
         binding.dayWishGeneratorGenerateButton.setOnClickListener(v -> {
+            generator = new WishGenerator();
             final String wish = generator.getRandomDayWish();
             final String emojis = String.valueOf(valueField.getText());
 
@@ -54,10 +55,11 @@ public class DayWishGeneratorFragment extends BaseFragment {
                         .show();
             } else {
                 if (getContext() != null) {
-                    final int numberOfEmojis = Integer.parseInt(emojis);
+                    final String fullExpression = wish +
+                            generator.generator(Integer.parseInt(emojis));
                     ClipboardUtils.save(getContext(),
                                         String.valueOf(R.string.wish_copied_hint),
-                                        (wish + generator.generator(numberOfEmojis)));
+                                        fullExpression);
 
                     final TextView dayWishGeneratorTextView = binding.dayWishGeneratorHint;
                     final String output = "Комплимент: " + wish;

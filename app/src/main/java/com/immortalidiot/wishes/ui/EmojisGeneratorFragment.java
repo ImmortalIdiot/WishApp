@@ -23,7 +23,7 @@ import com.immortalidiot.wishes.databinding.FragmentEmojisGeneratorBinding;
 
 public class EmojisGeneratorFragment extends BaseFragment {
     FragmentEmojisGeneratorBinding binding;
-    WishGenerator generator = new WishGenerator();
+    WishGenerator generator;
     CallbackFragment fragment;
 
     @Override
@@ -57,6 +57,7 @@ public class EmojisGeneratorFragment extends BaseFragment {
 
         final AppCompatButton generate = binding.emojisGeneratorGenerateButton;
         generate.setOnClickListener(v -> {
+            generator = new WishGenerator();
             final String text = String.valueOf(field.getText());
             if (TextUtils.isEmpty(text)) {
                 Toast.makeText(getContext(),
@@ -64,11 +65,11 @@ public class EmojisGeneratorFragment extends BaseFragment {
                                Toast.LENGTH_SHORT)
                         .show();
             } else {
-                final int textValue = Integer.parseInt(text);
                 if (getContext() != null) {
+                    final String expression = generator.generator(Integer.parseInt(text));
                     ClipboardUtils.save(getContext(),
                                         String.valueOf(R.string.text_copied_hint),
-                                        generator.generator(textValue));
+                                        expression);
 
                     generate.setText(R.string.refresh_button_text);
                     Toast.makeText(getContext(),
