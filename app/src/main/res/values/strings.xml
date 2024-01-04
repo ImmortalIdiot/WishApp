@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Wishes</string>
 
-    <string name="creators">Разработчики</string>
+    <string name="developers">Разработчики</string>
     <string name="back">Назад</string>
 
     <string name="developer">Разработчик</string>

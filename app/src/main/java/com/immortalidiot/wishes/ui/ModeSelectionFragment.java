@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import com.immortalidiot.wishes.databinding.FragmentModeSelectionBinding;
 
-public class ModeSelectionFragment extends FragmentUtils {
+public class ModeSelectionFragment extends BaseFragment {
     FragmentModeSelectionBinding binding;
     CallbackFragment fragment;
 
@@ -17,25 +17,25 @@ public class ModeSelectionFragment extends FragmentUtils {
         binding = FragmentModeSelectionBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
-        binding.loveEmojiGenerator.setOnClickListener(v -> {
+        binding.emojisGenerator.setOnClickListener(v -> {
             if (fragment != null) {
                 fragment.changeFragment(new EmojisGeneratorFragment(), true);
             }
         });
 
-        binding.dayWishGeneratorMode.setOnClickListener(v -> {
+        binding.dayWishGenerator.setOnClickListener(v -> {
             if (fragment != null) {
                 fragment.changeFragment(new DayWishGeneratorFragment(), true);
             }
         });
 
-        binding.nightWishGeneratorMode.setOnClickListener(v -> {
+        binding.nightWishGenerator.setOnClickListener(v -> {
             if (fragment != null) {
                 fragment.changeFragment(new NightWishGeneratorFragment(), true);
             }
         });
 
-        binding.creditsButton.setOnClickListener(v -> {
+        binding.developersButton.setOnClickListener(v -> {
             if (fragment != null) {
                 fragment.changeFragment(new CreditsFragment(), true);
             }

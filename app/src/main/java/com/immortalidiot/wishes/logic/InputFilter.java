@@ -1,9 +1,8 @@
-package com.immortalidiot.wishes;
+package com.immortalidiot.wishes.logic;
 
 import android.text.Spanned;
 
 public class InputFilter implements android.text.InputFilter {
-
     private final int min;
     private final int max;
 

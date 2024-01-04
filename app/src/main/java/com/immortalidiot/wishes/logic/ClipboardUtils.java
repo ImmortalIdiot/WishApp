@@ -1,9 +1,8 @@
-package com.immortalidiot.wishes;
+package com.immortalidiot.wishes.logic;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-
 
 public class ClipboardUtils {
     public static void save(Context context, String hint, CharSequence copiedText) {

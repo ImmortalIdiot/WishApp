@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.immortalidiot.wishes.databinding.FragmentCreditsBinding;
 
-public class CreditsFragment extends FragmentUtils {
+public class CreditsFragment extends BaseFragment {
     FragmentCreditsBinding binding;
     CallbackFragment fragment;
 
@@ -21,7 +21,7 @@ public class CreditsFragment extends FragmentUtils {
         binding = FragmentCreditsBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
-        binding.backButton.setOnClickListener(v -> {
+        binding.creditsBackButton.setOnClickListener(v -> {
             if (fragment != null) {
                 closeFragment();
             }
@@ -46,6 +46,7 @@ public class CreditsFragment extends FragmentUtils {
     }
 
     public void setCallbackFragment(CallbackFragment fragment) { this.fragment = fragment; }
+
     private void closeFragment() {
         FragmentManager manager = getParentFragmentManager();
         manager.popBackStack();

@@ -1,5 +1,5 @@
 package com.immortalidiot.wishes.ui;
 
 public interface CallbackFragment {
-    void changeFragment(FragmentUtils fragment, boolean isReturning);
+    void changeFragment(BaseFragment fragment, boolean isReturning);
 }

@@ -7,11 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.immortalidiot.wishes.databinding.ActivityMainBinding;
 import com.immortalidiot.wishes.ui.CallbackFragment;
-import com.immortalidiot.wishes.ui.FragmentUtils;
+import com.immortalidiot.wishes.ui.BaseFragment;
 import com.immortalidiot.wishes.ui.ModeSelectionFragment;
 
 public class MainActivity extends AppCompatActivity implements CallbackFragment {
     ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements CallbackFragment 
     }
 
     @Override
-    public void changeFragment(FragmentUtils fragment, boolean isReturning) {
+    public void changeFragment(BaseFragment fragment, boolean isReturning) {
         fragment.setCallbackFragment(this);
         if (isReturning) {
             getSupportFragmentManager()
