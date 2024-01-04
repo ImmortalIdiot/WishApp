@@ -5,10 +5,9 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 public class InputMethodUtils {
-    public static void hideVirtualKeyboard(View view) {
+    public static void hideVirtualKeyboard(Context context, View view) {
         if (view != null) {
-            InputMethodManager imm = (InputMethodManager) view
-                    .getContext()
+            InputMethodManager imm = (InputMethodManager) context
                     .getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }

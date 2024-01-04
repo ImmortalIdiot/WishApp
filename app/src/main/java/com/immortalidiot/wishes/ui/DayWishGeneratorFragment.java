@@ -3,10 +3,10 @@ package com.immortalidiot.wishes.ui;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.TextUtils;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,8 +46,9 @@ public class DayWishGeneratorFragment extends BaseFragment {
                 new com.immortalidiot.wishes.logic.InputFilter(MIN_LENGTH, MAX_LENGTH)});
 
         valueField.setOnEditorActionListener((v, actionId, event) -> {
-            if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
-                InputMethodUtils.hideVirtualKeyboard(view);
+            if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_NULL) {
+                InputMethodUtils.hideVirtualKeyboard(getContext(), valueField);
+                return true;
             }
             return false;
         });

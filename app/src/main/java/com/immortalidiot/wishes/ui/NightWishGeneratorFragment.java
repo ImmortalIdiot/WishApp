@@ -3,10 +3,10 @@ package com.immortalidiot.wishes.ui;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.TextUtils;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,11 +15,11 @@ import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.immortalidiot.wishes.InputMethodUtils;
-import com.immortalidiot.wishes.logic.ClipboardUtils;
 import com.immortalidiot.wishes.NumericKeyBoardTransformation;
 import com.immortalidiot.wishes.R;
-import com.immortalidiot.wishes.logic.WishGenerator;
 import com.immortalidiot.wishes.databinding.FragmentNightWishGeneratorBinding;
+import com.immortalidiot.wishes.logic.ClipboardUtils;
+import com.immortalidiot.wishes.logic.WishGenerator;
 
 public class NightWishGeneratorFragment extends BaseFragment {
     FragmentNightWishGeneratorBinding binding;
@@ -47,8 +47,9 @@ public class NightWishGeneratorFragment extends BaseFragment {
         });
 
         valueField.setOnEditorActionListener((v, actionId, event) -> {
-            if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
-                InputMethodUtils.hideVirtualKeyboard(view);
+            if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_NULL) {
+                InputMethodUtils.hideVirtualKeyboard(getContext(), valueField);
+                return true;
             }
             return false;
         });
