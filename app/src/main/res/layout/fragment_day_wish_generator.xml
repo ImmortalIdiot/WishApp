@@ -54,7 +54,7 @@
             android:inputType="numberPassword"
             android:hint="@string/min_and_max_hint"
             android:textSize="22sp"
-            android:textColor="@color/hint_color"
+            android:textColor="@color/white"
             android:textColorHint="@color/hint_color"
             android:fontFamily="@font/tomorrow_light"
             app:layout_constraintStart_toStartOf="parent"
