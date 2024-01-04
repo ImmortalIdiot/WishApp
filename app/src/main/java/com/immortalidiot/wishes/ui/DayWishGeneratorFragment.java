@@ -3,6 +3,7 @@ package com.immortalidiot.wishes.ui;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.immortalidiot.wishes.InputMethodUtils;
 import com.immortalidiot.wishes.NumericKeyBoardTransformation;
 import com.immortalidiot.wishes.R;
 import com.immortalidiot.wishes.databinding.FragmentDayWishGeneratorBinding;
@@ -42,6 +44,13 @@ public class DayWishGeneratorFragment extends BaseFragment {
         final int MAX_LENGTH = 2000;
         valueField.setFilters(new InputFilter[]{
                 new com.immortalidiot.wishes.logic.InputFilter(MIN_LENGTH, MAX_LENGTH)});
+
+        valueField.setOnEditorActionListener((v, actionId, event) -> {
+            if (event.getAction() == KeyEvent.ACTION_DOWN || actionId == KeyEvent.KEYCODE_ENTER) {
+                InputMethodUtils.hideVirtualKeyboard(view);
+            }
+            return false;
+        });
 
         binding.dayWishGeneratorGenerateButton.setOnClickListener(v -> {
             generator = new WishGenerator();
