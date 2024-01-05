@@ -73,7 +73,7 @@ public class NightWishGeneratorFragment extends BaseFragment {
                             fullExpression);
 
                     final TextView nightWishGeneratorTextView = binding.nightWishHint;
-                    final String output = "Комплимент: " + wish;
+                    final String output = "Пожелание: " + wish;
 
                     nightWishGeneratorTextView.setTextSize(20);
                     nightWishGeneratorTextView.setText(output);

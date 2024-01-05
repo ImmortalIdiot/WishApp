@@ -72,7 +72,7 @@ public class DayWishGeneratorFragment extends BaseFragment {
                                         fullExpression);
 
                     final TextView dayWishGeneratorTextView = binding.dayWishGeneratorHint;
-                    final String output = "Комплимент: " + wish;
+                    final String output = "Пожелание: " + wish;
 
                     dayWishGeneratorTextView.setTextSize(20);
                     dayWishGeneratorTextView.setText(output);
