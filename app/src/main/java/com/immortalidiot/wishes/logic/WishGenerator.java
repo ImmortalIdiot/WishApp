@@ -54,7 +54,7 @@ public class WishGenerator {
 
         String nightWish;
         if (chance > 135) { nightWish = "Споки ноки в обе щёки"; }
-        else if  (chance > 130) { nightWish = "Споки ноки нежно щёки"; }
+        else if  (chance > 130) { nightWish = "Споки ноки нежно в щёки"; }
         else nightWish = getRandomElement(NIGHT_LIST);
 
         chance = getRandomIntegerValue();
